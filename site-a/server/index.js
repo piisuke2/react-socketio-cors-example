@@ -8,7 +8,7 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, {
-  // http://localhost:3002からのcorsを許可
+  // TIPS: site-bからのcorsを許可
   cors: {
     origin: "http://localhost:3002",
     methods: ["GET", "POST"],

@@ -1,6 +1,7 @@
 # react-socketio-cors-example
 
-Reactで作成したコンポーネントを外部サイトに埋め込んでSocketIOで通信するサンプル
+Reactで作成したコンポーネントを外部サイトに埋め込んでSocketIOで通信するサンプル  
+要点は「TIPS:」でコメントしています
 
 * site-a: コンポーネントを配布するサイト
 * site-b: 埋め込み先のサイト
