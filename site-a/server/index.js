@@ -38,6 +38,10 @@ glob('build/static/js/main.*.js', function (err, files) {
   jsFilePath = files[0];
 });
 app.get('/react-app.js', (req, res) => {
+  // TIPS: ファイル名が固定になるのでキャッシュ無効にする
+  res.header('Cache-Control', ['private', 'no-store', 'no-cache', 'must-revalidate', 'proxy-revalidate'].join(','));
+  res.header('no-cache', 'Set-Cookie');
+  res.header('Pragma', 'no-cache');
   res.sendFile(path.join(__dirname, jsFilePath));
 });
 
